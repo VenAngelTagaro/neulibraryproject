@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>NEUL | Admin Dashboard</title>
+        <link rel="icon" href="../images/neu-logo.png" />
+        <link rel="stylesheet" href="../css/fonts.css" />
+        <link rel="stylesheet" href="../css/style.css" />
+        <link rel="stylesheet" href="../css/statistics.css" />
+    </head>
+    <body>
+        <nav id="upperbar">
+            <div id="openSidebarButton">
+                <ul class="burger">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <a class="nav-logo" href="/">
+                <img src="../images/neu-logo.png" />
+                <span>NEU Library</span>
+            </a>
+            <div class="nav-links">
+                <span>Admin Dashboard</span>
+            </div>
+            <div class="nav-buttons">
+                <span id="userName">Hi, user</span>
+                <div class="dropdown-container">
+                    <div id="dropdownButton">
+                        <p id="firstLetter"></p>
+                        <img
+                            id="dropdownArrow"
+                            src="../images/down-arrow.png"
+                        />
+                    </div>
+                    <div id="dropdownContent">
+                        <a href="#">Settings & Privacy</a>
+                        <a href="#">Help & Support</a>
+                        <button id="logoutButton">Log out</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <nav id="sidebar">
+            <div id="closeSidebarButton">
+                <ul class="burger">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <a class="nav-logo" href="/">
+                <img src="../images/neu-logo.png" />
+                <span>NEU Library</span>
+            </a>
+            <div class="pageSection">
+                <a id="adminDashboardSection" class="page" href="/statistics"
+                    >Admin Dashboard</a
+                >
+                <a id="dashboardSection" class="page" href="/dashboard"
+                    >Dashboard</a
+                >
+                <a id="catalogButton" class="page" href="/catalog">Catalog</a>
+            </div>
+        </nav>
+
+        <main>
+            <div class="users-section">
+                <div class="users-header">
+                    <h2>User Management</h2>
+                    <input
+                        type="text"
+                        id="userSearch"
+                        placeholder="Search by name or ID..."
+                    />
+                </div>
+                <div class="users-table-wrapper">
+                    <table class="users-table">
+                        <thead>
+                            <tr>
+                                <th>ID Number</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>User Type</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="usersTableBody">
+                            <tr>
+                                <td colspan="6">Loading users...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="stats-cards">
+                <div class="stat-card">
+                    <span class="stat-label">Total Users</span>
+                    <span class="stat-number" id="totalUsers">—</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Students</span>
+                    <span class="stat-number" id="totalStudents">—</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Faculty</span>
+                    <span class="stat-number" id="totalFaculty">—</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Borrowed Books</span>
+                    <span class="stat-number" id="totalBorrowed">—</span>
+                </div>
+                <div class="stat-card danger">
+                    <span class="stat-label">Blocked Users</span>
+                    <span class="stat-number" id="blockedUsers">—</span>
+                </div>
+            </div>
+
+            <div class="visit-logs-section">
+                <div class="visit-logs-header">
+                    <h2>Visitor Logs</h2>
+                    <div class="visit-logs-filters">
+                        <select id="filterPeriod">
+                            <option value="today">Today</option>
+                            <option value="week">This Week</option>
+                            <option value="range">Date Range</option>
+                        </select>
+                        <div id="dateRangeInputs" style="display: none">
+                            <input type="date" id="dateFrom" />
+                            <span>to</span>
+                            <input type="date" id="dateTo" />
+                        </div>
+                        <select id="filterReason">
+                            <option value="">All Reasons</option>
+                            <option>Studying</option>
+                            <option>Research</option>
+                            <option>Using computer</option>
+                            <option>Other</option>
+                        </select>
+                        <select id="filterUserType">
+                            <option value="">All Types</option>
+                            <option value="Student">Student</option>
+                            <option value="Faculty">Faculty</option>
+                        </select>
+                        <button id="applyFiltersBtn">Apply</button>
+                    </div>
+                </div>
+                <div class="users-table-wrapper">
+                    <table class="users-table">
+                        <thead>
+                            <tr>
+                                <th>ID Number</th>
+                                <th>Name</th>
+                                <th>User Type</th>
+                                <th>Reason</th>
+                                <th>Date & Time</th>
+                            </tr>
+                        </thead>
+                        <tbody id="visitLogsTableBody">
+                            <tr>
+                                <td colspan="5">Loading visit logs...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="stats-chart-section">
+                <div class="chart-card">
+                    <h2>User Breakdown</h2>
+                    <canvas id="userChart"></canvas>
+                </div>
+                <div class="chart-card">
+                    <h2>Library Activity</h2>
+                    <canvas id="activityChart"></canvas>
+                </div>
+            </div>
+        </main>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="../js/app.js" defer></script>
+        <script src="../js/statistics.js" defer></script>
+    </body>
+</html>

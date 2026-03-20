@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>NEUL | Dashboard</title>
+        <link rel="icon" href="../images/neu-logo.png" />
+        <link rel="stylesheet" href="../css/style.css" />
+        <link rel="stylesheet" href="../css/dashboard.css" />
+        <link rel="stylesheet" href="../css/fonts.css" />
+    </head>
+    <body>
+        <nav id="upperbar">
+            <div id="openSidebarButton">
+                <ul class="burger">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <a class="nav-logo" href="/">
+                <img src="../images/neu-logo.png" />
+                <span>NEU Library</span>
+            </a>
+            <div class="nav-links">
+                <span>User Dashboard</span>
+            </div>
+            <div class="nav-buttons">
+                <span id="userName">Hi, user</span>
+                <div class="dropdown-container">
+                    <div id="dropdownButton">
+                        <p id="firstLetter"></p>
+                        <img
+                            id="dropdownArrow"
+                            src="../images/down-arrow.png"
+                        />
+                    </div>
+                    <div id="dropdownContent">
+                        <a href="#">Settings & Privacy</a>
+                        <a href="#">Help & Support</a>
+                        <button id="logoutButton">Log out</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <nav id="sidebar">
+            <div id="closeSidebarButton">
+                <ul class="burger">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <a class="nav-logo" href="/">
+                <img src="../images/neu-logo.png" />
+                <span>NEU Library</span>
+            </a>
+            <div class="pageSection">
+                <a id="adminDashboardSection" class="page" href="/statistics"
+                    >Admin Dashboard</a
+                >
+                <a id="dashboardSection" class="page" href="/dashboard"
+                    >Dashboard</a
+                >
+                <a id="catalogButton" class="page" href="/catalog">Catalog</a>
+            </div>
+        </nav>
+        <main>
+            <section class="loan-section">
+                <h2>On Loan</h2>
+                <div id="loansContainer"></div>
+            </section>
+            <section class="author-section">
+                <h2>Favorite Authors</h2>
+                <div id="favoriteAuthors"></div>
+            </section>
+        </main>
+
+        <script src="../js/app.js" defer></script>
+        <script src="../js/dashboard.js" defer></script>
+    </body>
+</html>

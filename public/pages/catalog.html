@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>NEUL | Catalog</title>
+        <link rel="icon" href="../images/neu-logo.png" />
+        <link rel="stylesheet" href="../css/fonts.css" />
+        <link rel="stylesheet" href="../css/style.css" />
+        <link rel="stylesheet" href="../css/catalog.css" />
+    </head>
+    <body>
+        <nav id="upperbar">
+            <div id="openSidebarButton">
+                <ul class="burger">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <a class="nav-logo" href="/">
+                <img src="../images/neu-logo.png" />
+                <span>NEU Library</span>
+            </a>
+            <div class="nav-links">
+                <div class="searchbar">
+                    <input
+                        id="searchbarInput"
+                        type="text"
+                        placeholder="Type something in mind"
+                    />
+                    <img src="../images/magnifier.png" />
+                </div>
+            </div>
+            <div class="nav-buttons">
+                <span id="userName">Hi, user</span>
+                <div class="dropdown-container">
+                    <div id="dropdownButton">
+                        <p id="firstLetter"></p>
+                        <img
+                            id="dropdownArrow"
+                            src="../images/down-arrow.png"
+                        />
+                    </div>
+                    <div id="dropdownContent">
+                        <a href="#">Settings & Privacy</a>
+                        <a href="#">Help & Support</a>
+                        <button id="logoutButton">Log out</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <nav id="sidebar">
+            <div id="closeSidebarButton">
+                <ul class="burger">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <a class="nav-logo" href="/">
+                <img src="../images/neu-logo.png" />
+                <span>NEU Library</span>
+            </a>
+            <div class="pageSection">
+                <a id="adminDashboardSection" class="page" href="/statistics"
+                    >Admin Dashboard</a
+                >
+                <a id="dashboardSection" class="page" href="/dashboard"
+                    >Dashboard</a
+                >
+                <a id="catalogSection" class="page" href="/catalog">Catalog</a>
+            </div>
+        </nav>
+        <main>
+            <section id="bookContainer"></section>
+        </main>
+
+        <script src="../js/app.js"></script>
+        <script src="../js/catalog.js"></script>
+    </body>
+</html>

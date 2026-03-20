@@ -1,0 +1,203 @@
+.registration-form {
+    display: flex;
+    flex: 1;
+
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.video-container {
+    width: 30%;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.registration-form .form-container {
+    width: 70%;
+    background-color: #2b2d42;
+
+    display: flex;
+    flex-direction: row;
+    overflow-y: auto;
+}
+
+.form-container .lights-container {
+    display: flex;
+    padding: 0 2rem 0 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.lights-container ul {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    overflow: hidden;
+}
+
+.lights-container .light {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: #edf2f4;
+    z-index: 1;
+    transition: background-color 0.7s;
+}
+
+.lights-container .light:first-child {
+    background-color: #d90429;
+}
+#registrationProgressIndicator {
+    background-color: #d90429;
+    width: 8px;
+    height: 0; /* 0% 45% 80% 160% 200% (progress poitns) */
+    border-radius: 18px;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: height 0.5s ease-in-out;
+}
+
+.form-container .form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 2rem 2rem 4rem;
+}
+
+.form h1 {
+    width: 100%;
+}
+
+.form .form-inputs {
+    margin-top: 30px;
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.form input {
+    background-color: transparent;
+    border-color: #8d99ae;
+    border-width: 1px;
+    border-style: solid;
+    font-size: clamp(0.8125rem, 1vw + 0.5rem, 0.9375rem);
+    width: 100%;
+    padding: 1.5rem 1rem;
+    caret-shape: block;
+}
+.form-inputs #userTypeSelect {
+    background-color: transparent;
+    border-color: #8d99ae;
+    border-width: 1px;
+    border-style: solid;
+    font-size: clamp(0.8125rem, 1vw + 0.5rem, 0.9375rem);
+    width: 100%;
+    padding: 1.5rem 1rem;
+    color: #8d99ae;
+    cursor: pointer;
+}
+.form select option {
+    color: #edf2f4;
+    border-radius: 0;
+}
+
+#userTypeSpecificInformation {
+    position: relative;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #8d99ae;
+    flex: 1;
+    margin-top: 30px;
+    padding: 2rem 2rem;
+}
+
+#userTypeSpecificInformation .section-label {
+    background-color: #2b2d42;
+    padding: 0 1rem;
+    position: absolute;
+    top: -10px;
+    left: 1.5%;
+}
+
+.form .button-section {
+    padding: 2rem 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.button-section #registerButton {
+    background-color: var(--text-primary);
+    border-width: 1px;
+    border-style: solid;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--navigation-bar-bg-primary);
+    padding: 0.7rem 1.7rem;
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease-in-out,
+        border-radius 0.2s ease-in-out;
+}
+
+.button-section #registerButton:hover {
+    border-radius: 16px;
+}
+
+#studentAdditionalInformation,
+#facultyAdditionalInformation,
+#employeeAdditionalInformation {
+    height: 100%;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+@media (max-width: 1368px) {
+    .registration-form {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .form .form-inputs {
+        grid-template-columns: 1fr;
+    }
+
+    #studentAdditionalInformation,
+    #facultyAdditionalInformation,
+    #employeeAdditionalInformation {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .registration-form {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .registration-form .form-container {
+        width: 100%;
+    }
+
+    .video-container {
+        display: none;
+    }
+}

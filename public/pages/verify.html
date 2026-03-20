@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>NEUL | Email Verification</title>
+        <link rel="stylesheet" href="../css/style.css" />
+        <link rel="stylesheet" href="../css/fonts.css" />
+        <link rel="stylesheet" href="../css/verify.css" />
+        <link rel="icon" href="../images/neu-logo.png" />
+    </head>
+    <body>
+        <nav>
+            <a class="nav-logo" href="../">
+                <img src="../images/neu-logo.png" />
+                <span>NEU Library</span>
+            </a>
+        </nav>
+
+        <main>
+            <section class="verification">
+                <div class="verification-container">
+                    <div class="image">
+                        <img src="../images/phonemessage.png" />
+                    </div>
+                    <div class="content">
+                        <h1>Verify Your Email</h1>
+                        <p>
+                            A 6-digit verification code has been sent to your
+                            email.
+                        </p>
+                        <div class="resend-container">
+                            <span id="resendTimer">0</span>
+                            <button id="resendCodeButton">Resend</button>
+                        </div>
+                        <div class="input-container">
+                            <input
+                                class="code-input"
+                                type="text"
+                                maxlength="1"
+                            />
+                            <input
+                                class="code-input"
+                                type="text"
+                                maxlength="1"
+                            />
+                            <input
+                                class="code-input"
+                                type="text"
+                                maxlength="1"
+                            />
+                            <input
+                                class="code-input"
+                                type="text"
+                                maxlength="1"
+                            />
+                            <input
+                                class="code-input"
+                                type="text"
+                                maxlength="1"
+                            />
+                            <input
+                                class="code-input"
+                                type="text"
+                                maxlength="1"
+                            />
+                        </div>
+                        <button id="verifyButton">Verify</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <div id="popupNotifier"></div>
+
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+        <script src="../js/app.js" defer></script>
+        <script src="../js/verify.js" defer></script>
+    </body>
+</html>

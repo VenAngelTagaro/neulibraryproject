@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>NEUL | Registration Form</title>
+        <link rel="stylesheet" href="../css/style.css" />
+        <link rel="stylesheet" href="../css/register.css" />
+        <link rel="stylesheet" href="../css/fonts.css" />
+        <link rel="icon" href="../images/neu-logo.png" />
+    </head>
+    <body>
+        <!-- THIS IS THE HEADER OF MY REGISTER PAGE-->
+        <nav>
+            <a class="nav-logo" href="../">
+                <img src="images/neu-logo.png" />
+                <span>NEU Library</span>
+            </a>
+        </nav>
+
+        <main>
+            <section class="registration-form">
+                <div class="video-container">
+                    <video
+                        autoplay
+                        muted
+                        loop
+                        playinsline
+                        disablePictureInPicture
+                    >
+                        <source src="../videos/neu2.mp4" type="video/mp4" />
+                    </video>
+                </div>
+                <div class="form-container">
+                    <div class="form">
+                        <h1>Registration Form</h1>
+                        <div class="form-inputs">
+                            <input
+                                id="firstNameInput"
+                                type="text"
+                                placeholder="First Name"
+                            />
+                            <input
+                                id="lastNameInput"
+                                type="text"
+                                placeholder="Last Name"
+                            />
+                            <input
+                                id="emailInput"
+                                type="email"
+                                placeholder="Email"
+                            />
+                            <input
+                                id="passwordInput"
+                                type="password"
+                                placeholder="Password"
+                            />
+                            <input
+                                id="passwordInputChecker"
+                                type="password"
+                                placeholder="Repeat Password"
+                            />
+                            <select id="userTypeSelect">
+                                <option value="">Select Type</option>
+                                <option value="Student">Student</option>
+                                <option value="Faculty">Faculty</option>
+                            </select>
+                        </div>
+                        <div id="userTypeSpecificInformation">
+                            <span class="section-label"
+                                >User Specific Information</span
+                            >
+                            <div id="studentAdditionalInformation">
+                                <input
+                                    id="courseInput"
+                                    type="text"
+                                    placeholder="Program/Course"
+                                />
+                                <input
+                                    id="yearLevelInput"
+                                    type="text"
+                                    placeholder="Year Level"
+                                />
+                            </div>
+                            <div id="facultyAdditionalInformation">
+                                <input
+                                    id="facultyDepartmentInput"
+                                    type="text"
+                                    placeholder="Faculty Department"
+                                />
+                                <input
+                                    id="positionInput"
+                                    type="text"
+                                    placeholder="Position"
+                                />
+                            </div>
+                        </div>
+                        <div class="button-section">
+                            <button id="registerButton">Register</button>
+                        </div>
+                    </div>
+                    <div class="lights-container">
+                        <ul>
+                            <div id="registrationProgressIndicator"></div>
+                            <li class="light"></li>
+                            <li class="light"></li>
+                            <li class="light"></li>
+                            <li class="light"></li>
+                            <li class="light"></li>
+                            <li class="light"></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <div id="popupNotifier"></div>
+
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+        <script src="js/app.js" defer></script>
+        <script src="js/register.js" defer></script>
+    </body>
+</html>
