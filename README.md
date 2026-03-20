@@ -3,6 +3,7 @@
 A full-stack web simulation of our school's library system. Originally scoped as a visitor log system, it evolved into a broader library simulation to experiment and learn backend development and database design. I am sorry if I didn't follow the requirements, I just wanted to learn how things work by scratch.
 
 Please feel free to leave a suggestion po (something na pwede ko magamit sa later projects), Sir.
+
 (May notes po ako sa baba ng readme file and please read the whole thing I wrote here po);
 
 🔗 **Live VERCEL Demo:** [https://neulibrary-hbil3ypux-vencarlostagaro-2303s-projects.vercel.app/]
@@ -10,8 +11,11 @@ Please feel free to leave a suggestion po (something na pwede ko magamit sa late
 🔗 **Live RENDER Demo:** [https://neulibraryproject.onrender.com/]
 
 For Sir Jerry:
+
 Admin: jcesperanza.admin@neu.edu.ph | 123456
+
 Student/Faculty: jcesperanza.student@neu.edu.ph | 123456
+
 
 ---
 
