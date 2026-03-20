@@ -10,6 +10,8 @@ Please feel free to leave a suggestion po (something na pwede ko magamit sa late
 
 🔗 **Live RENDER Demo:** [https://neulibraryproject.onrender.com/]
 
+---
+
 For Sir Jerry:
 
 Admin: jcesperanza.admin@neu.edu.ph | 123456
