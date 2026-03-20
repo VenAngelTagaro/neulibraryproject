@@ -1,8 +1,16 @@
 # NEU Library
 
-A full-stack web simulation of our school's library system. Originally scoped as a visitor log system, it evolved into a broader library simulation to experiment and learn backend development and database design.
+A full-stack web simulation of our school's library system. Originally scoped as a visitor log system, it evolved into a broader library simulation to experiment and learn backend development and database design. I am sorry if I didn't follow the requirements, I just wanted to learn how things work by scratch.
 
-🔗 **Live Demo:** [insert link here]
+Please feel free to leave a suggestion po (something na pwede ko magamit sa later projects), Sir.
+(May notes po ako sa baba ng readme file and please read the whole thing I wrote here po);
+
+🔗 **Live VERCEL Demo:** [https://neulibrary-hbil3ypux-vencarlostagaro-2303s-projects.vercel.app/]
+🔗 **Live RENDER Demo:** [https://neulibraryproject.onrender.com/]
+
+For Sir Jerry:
+Admin: jcesperanza.admin@neu.edu.ph | 123456
+Student/Faculty: jcesperanza.student@neu.edu.ph | 123456
 
 ---
 
@@ -95,5 +103,5 @@ DB_NAME=
 
 - This project didn't strictly follow all system requirements — the goal was to learn by building things from scratch, with AI used to explain concepts along the way
 - QR code scanning was not implemented
-- College filtering is not yet implemented as not all users may belong to a specific college
-- Originally used SMTP for emails, then switched to downloadable credentials (due to Vercel/Render blocking SMTP ports), then eventually moved to EmailJS
+- College filtering is not implemented as not all users may belong to a specific college (Judging from what I see whenever I enter the library.)
+- Originally used SMTP for emails, then switched to downloadable credentials (due to Vercel/Render blocking SMTP ports), then eventually moved to EmailJSa (Thanks to Felipe)
